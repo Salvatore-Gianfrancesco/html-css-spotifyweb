@@ -348,6 +348,17 @@ main .active_bar{
 
 .webapp_bottom i{
     padding: 0 0.5rem;
+    transition: 0.3s;
+}
+
+.webapp_bottom a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.webapp_bottom i:hover{
+    color: var(--light);
+    cursor: pointer;
 }
 
 /* Left Side */
