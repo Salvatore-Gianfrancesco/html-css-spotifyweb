@@ -122,8 +122,8 @@ a{
 
 .plus i{
     color: var(--bg-sidebar);
-    font-size: 1rem;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: 900;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -178,6 +178,10 @@ li{
     font-size: 15px;
 }
 
+.sidebar .active{
+    color: var(--light);
+}
+
 .sidebar .active_bar{
     height: 30px;
     width: 0;
@@ -189,10 +193,14 @@ li{
 
 /* #endregion Sidebar */
 
+/* #region Main Content */
+
 .main_content{
     width: calc(100% - 240px);
     margin-bottom: 100px;
 }
+
+/* Header */
 
 header{
     height: 100px;
@@ -212,6 +220,10 @@ header .btn{
     border-radius: 30px;
     display: inline-block;
 }
+
+/* /Header */
+
+/* Main */
 
 main{
     height: 100%;
@@ -269,6 +281,10 @@ main .active_bar{
     transform: translate(-50%, -50%);
 }
 
+/* /Main */
+
+/* #endregion Main Content */
+
 /* #endregion Webapp Top */
 
 /* #region Webapp Bottom */
@@ -277,7 +293,113 @@ main .active_bar{
     height: 100px;
     width: 100%;
     background-color: var(--bg-webapp-bottom);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.left_side,
+.center_side,
+.right_side{
+    display: flex;
+    align-items: center;
+}
+
+.webapp_bottom i{
+    padding: 0 0.5rem;
+}
+
+/* Left Side */
+
+.left_side img{
+    width: 40px;
+}
+
+.album{
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+.album div:first-of-type{
+    color: var(--light);
+}
+
+.album div:last-of-type{
+    font-size: 12px;
+}
+
+/* /Left Side */
+
+/* Center Side */
+
+.center_side{
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+}
+
+.center_side .top{
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.play{
+    font-size: 25px;
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+.center_side .bottom{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.time_bar,
+.time_bar .on{
+    height: 4px;
+    border-radius: 50px;
+}
+
+.time_bar{
+    width: 500px;
+    background-color: var(--text-gray);
+    margin: 0 1rem;
+    display: inline-block;
+}
+
+.time_bar .on{
+    width: 45px;
+    background-color: var(--light);
+}
+
+/* /Center Side */
+
+/* Right Side */
+
+.right_side{
+    color: var(--light);
+}
+
+.volume_bar,
+.volume_bar .on{
+    height: 4px;
+    border-radius: 50px;
+}
+
+.volume_bar{
+    width: 100px;
+    background-color: var(--text-gray);
+}
+
+.volume_bar .on{
+    width: 25px;
+    background-color: var(--light);
+}
+
+/* /Right Side */
 
 /* #endregion Webapp Bottom */
 
