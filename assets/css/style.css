@@ -6,6 +6,7 @@
     --bg-plus: #a2a3a2;
     --text-gray: #707071;
     --light: #fff;
+    --active: #adfe2e;
 }
 
 /* #region Commons */
@@ -20,11 +21,16 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: var(--text-gray);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 img{
     max-width: 100%;
+}
+
+a{
+    color: var(--text-gray);
+    font-weight: 700;
 }
 
 /* #endregion Commons */
@@ -36,8 +42,21 @@ img{
     margin: auto;
 }
 
-.sidebar .active{
-    color: var(--light);
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-2{
+    width: calc(100% / 12 * 2);
+}
+
+.active{
+    position: relative;
+}
+
+.circle{
+    border-radius: 50%;
 }
 
 /* #endregion Utilities */
@@ -159,11 +178,20 @@ li{
     font-size: 15px;
 }
 
+.sidebar .active_bar{
+    height: 30px;
+    width: 0;
+    border: 2px solid var(--active);
+    border-radius: 50px;
+    position: absolute;
+    left: -1rem;
+}
+
 /* #endregion Sidebar */
 
 .main_content{
-    height: 100%;
     width: calc(100% - 240px);
+    margin-bottom: 100px;
 }
 
 header{
@@ -185,6 +213,62 @@ header .btn{
     display: inline-block;
 }
 
+main{
+    height: 100%;
+    background-color: var(--bg-main);
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+main nav{
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+main nav a{
+    color: var(--text-gray);
+    text-decoration: none;
+    padding: 0 0.5rem;
+}
+
+main .row{
+    margin: 0rem -0.5rem;
+}
+
+main .col-2{
+    padding: 0.5rem;
+}
+
+main h2{
+    color: var(--light);
+    padding: 1rem 0;
+}
+
+.card{
+    text-align: center;
+}
+
+.card h3{
+    color: var(--light);
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+main .active{
+    display: inline-block;
+}
+
+main .active_bar{
+    height: 0;
+    width: 30px;
+    border: 1px solid var(--active);
+    border-radius: 50px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* #endregion Webapp Top */
 
 /* #region Webapp Bottom */
@@ -196,15 +280,6 @@ header .btn{
 }
 
 /* #endregion Webapp Bottom */
-
-
-/* #region Debug */
-
-.debug .main_content{
-    background-color: var(--bg-main);
-}
-
-/* #endregion Debug */
 
 /* #region Responsive */
 
