@@ -399,7 +399,14 @@ main .active_bar{
 .play{
     font-size: 25px;
     margin: 0 0.5rem;
-    display: inline-block;
+}
+
+.play i{
+    transition: 0s;
+}
+
+.play:hover{
+    font-size: 30px;
 }
 
 .center_side .bottom{
@@ -418,7 +425,6 @@ main .active_bar{
     width: 500px;
     background-color: var(--text-gray);
     margin: 0 1rem;
-    display: inline-block;
 }
 
 .time_bar .on{
@@ -451,6 +457,33 @@ main .active_bar{
 }
 
 /* /Right Side */
+
+.time_bar .on,
+.volume_bar .on{
+    position: relative;
+}
+
+.time_bar .circle,
+.volume_bar .circle{
+    height: 10px;
+    width: 10px;
+    background-color: var(--light);
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.time_bar:hover .circle,
+.volume_bar:hover .circle{
+    display: block;
+}
+
+.time_bar:hover .on,
+.volume_bar:hover .on{
+    background-color: var(--active);
+}
 
 /* #endregion Webapp Bottom */
 
