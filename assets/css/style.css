@@ -1,5 +1,7 @@
 :root{
-
+    --bg-sidebar: #000101;
+    --bg-main-content: #141922;
+    --bg-webapp-bottom: #282828;
 }
 
 /* #region Commons */
@@ -10,3 +12,54 @@
     box-sizing: border-box;
 }
 
+/* #endregion Commons */
+
+/* #region Utilities */
+
+.container{
+    max-width: 1440px;
+    margin: auto;
+}
+
+/* #endregion Utilities */
+
+/* #region Webapp Top */
+
+.webapp_top{
+    height: calc(100vh - 90px);
+    width: 100%;
+    display: flex;
+}
+
+.sidebar{
+    height: 100%;
+    width: 240px;
+}
+
+.main_content{
+    height: 100%;
+    width: calc(100% - 240px);
+}
+
+/* #endregion Webapp Top */
+
+/* #region Webapp Bottom */
+
+.webapp_bottom{
+    height: 90px;
+    width: 100%;
+}
+
+/* #endregion Webapp Bottom */
+
+.debug .webapp_bottom{
+    background-color: var(--bg-webapp-bottom);
+}
+
+.debug .sidebar{
+    background-color: var(--bg-sidebar);
+}
+
+.debug .main_content{
+    background-color: var(--bg-main-content);
+}
