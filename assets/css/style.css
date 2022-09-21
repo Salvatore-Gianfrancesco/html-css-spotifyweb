@@ -37,10 +37,10 @@ a{
 
 /* #region Utilities */
 
-.container{
+/* .container{
     max-width: 1440px;
     margin: auto;
-}
+} */
 
 .row{
     display: flex;
@@ -60,8 +60,6 @@ a{
 }
 
 /* #endregion Utilities */
-
-/* #region Webapp Top */
 
 .webapp_top{
     height: calc(100vh - 100px);
@@ -266,6 +264,32 @@ main h2{
     padding-bottom: 0.5rem;
 }
 
+.image{
+    position: relative;
+}
+
+.card img{
+    transition: 0.3s;
+}
+
+.card i{
+    color: var(--light);
+    font-size: 50px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card:hover i{
+    display: block;
+}
+
+.card:hover img{
+    opacity: 60%;
+}
+
 main .active{
     display: inline-block;
 }
@@ -284,8 +308,6 @@ main .active_bar{
 /* /Main */
 
 /* #endregion Main Content */
-
-/* #endregion Webapp Top */
 
 /* #region Webapp Bottom */
 
