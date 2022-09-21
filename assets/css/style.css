@@ -31,6 +31,7 @@ img{
 a{
     color: var(--text-gray);
     font-weight: 700;
+    transition: 0.3s;
 }
 
 /* #endregion Commons */
@@ -59,6 +60,11 @@ a{
     border-radius: 50%;
 }
 
+.vert-align{
+    display: flex;
+    align-items: center;
+}
+
 /* #endregion Utilities */
 
 .webapp_top{
@@ -84,13 +90,12 @@ a{
     margin-bottom: 1rem;
 }
 
-.link{
+.sidebar a{
+    text-decoration: none;
     padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
 }
 
-.link span{
+.sidebar a span{
     padding-left: 5px;
 }
 
@@ -137,8 +142,8 @@ ul{
     list-style: none;
 }
 
-li{
-    padding: 0.5rem 0;
+li a{
+    display: inline-block;
 }
 
 .download,
@@ -189,6 +194,14 @@ li{
     left: -1rem;
 }
 
+a:hover{
+    color: var(--light);
+}
+
+a:hover div{
+    background-color: var(--light);
+}
+
 /* #endregion Sidebar */
 
 /* #region Main Content */
@@ -217,6 +230,7 @@ header .btn{
     border: 1px solid var(--light);
     border-radius: 30px;
     display: inline-block;
+    transition: 0s;
 }
 
 header .btn:hover{
