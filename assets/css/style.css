@@ -219,6 +219,10 @@ header .btn{
     display: inline-block;
 }
 
+header .btn:hover{
+    font-size: 15px;
+}
+
 /* /Header */
 
 /* Main */
