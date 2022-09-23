@@ -345,7 +345,6 @@ main .active_bar {
 }
 
 .left_side,
-.center_side,
 .right_side {
     display: flex;
     align-items: center;
@@ -391,23 +390,27 @@ main .active_bar {
 
 .center_side {
     color: var(--light);
-    display: flex;
-    flex-direction: column;
 }
 
 .center_side .top {
     margin-bottom: 0.5rem;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .play {
     font-size: 25px;
-    margin: 0 0.5rem;
+    margin: 0 1.5rem;
+    position: relative;
 }
 
 .play i {
     transition: 0s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .play:hover {
@@ -416,7 +419,9 @@ main .active_bar {
 
 .center_side .bottom {
     font-size: 12px;
+    margin-top: 1rem;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -433,7 +438,7 @@ main .active_bar {
 }
 
 .time_bar .on {
-    width: 45px;
+    width: 2.5rem;
     background-color: var(--light);
 }
 
@@ -509,6 +514,10 @@ main .active_bar {
     .time_bar {
         width: 15rem;
     }
+
+    .time_bar .on {
+        width: 1.25rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -518,6 +527,10 @@ main .active_bar {
 
     .time_bar {
         width: 5rem;
+    }
+
+    .time_bar .on{
+        width: 0.5rem;
     }
 
     .album {
