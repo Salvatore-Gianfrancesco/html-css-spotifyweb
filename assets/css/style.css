@@ -596,8 +596,21 @@ main .active_bar {
         margin-bottom: 50px;
         border: 0;
     }
+
+    .volume_bar,
+    .album{
+        display: none;
+    }
 }
 
+@media screen and (max-height: 700px) {
+    header{
+        display: none;
+    }
 
+    .main_content{
+        height: 100%;
+    }
+}
 
 /* #endregion Responsive */
