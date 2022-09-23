@@ -559,7 +559,8 @@ main .active_bar {
     ul,
     .plus,
     .profile span,
-    .logo {
+    .logo,
+    .icons {
         display: none;
     }
 
@@ -581,5 +582,22 @@ main .active_bar {
         display: none;
     }
 }
+
+@media screen and (max-width: 444px) {
+    header{
+        height: 50px;
+    }
+
+    header .btn{
+        padding: 0.5rem 2rem;
+    }
+
+    .main_content{
+        margin-bottom: 50px;
+        border: 0;
+    }
+}
+
+
 
 /* #endregion Responsive */
